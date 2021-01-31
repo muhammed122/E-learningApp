@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:weightSum="3"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2.4"
+        android:weightSum="2"
+        >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:gravity="center"
+   >
+<Button
+    android:id="@+id/makeattandecbuttoniddoctor"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.7"
+    android:gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/button_background_blue"
+    android:text="attendance"
+    android:textSize="18sp"
+
+    ></Button>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+
+            ></TextView>
+        <Button
+            android:id="@+id/uploaddatabuttoniddoctor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_blue"
+            android:text="upload matrial"
+            android:textSize="18sp"
+            ></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:gravity="center"
+    >
+        <Button
+            android:id="@+id/makequzebuttoniddoctor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_blue"
+            android:text="make Quze"
+            android:textSize="18sp"
+            ></Button>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+
+            ></TextView>
+        <Button
+            android:id="@+id/gradesbuttoniddoctor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_blue"
+            android:text="grades"
+            android:textSize="18sp"
+            ></Button>
+    </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/chatdoctorid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.3"
+        android:background="@drawable/button_background_blue"
+        android:textSize="18sp"
+        android:text="chat"
+        ></Button>
+</LinearLayout>
