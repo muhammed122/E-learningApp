@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-     android:weightSum="3"
-    >
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        ></LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -15,96 +19,215 @@
         android:weightSum="2"
         >
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:weightSum="3"
-        android:gravity="center"
-   >
-<Button
-    android:id="@+id/makeattandecbuttoniddoctor"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.7"
-    android:gravity="center"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:background="@drawable/button_background_blue"
-    android:text="attendance"
-    android:textSize="18sp"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
 
-    ></Button>
+                    >
+                    <ImageView
+                        android:id="@+id/makeattandecbuttoniddoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/attandase"
+                        android:textSize="18sp"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.3"
+                        ></ImageView>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_background_blue"
+                    android:layout_marginRight="15dp"
+                    android:text="Take attandance"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+            </LinearLayout>
 
-            ></TextView>
-        <Button
-            android:id="@+id/uploaddatabuttoniddoctor"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_blue"
-            android:text="upload matrial"
-            android:textSize="18sp"
-            ></Button>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:gravity="top|center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/uploadmatrail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/upload"
+                        android:textSize="18sp"
+
+                        ></ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_background_blue"
+                    android:layout_marginRight="15dp"
+                    android:text="Upload matarial"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="15dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/makequzebuttoniddoctor"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/quze"
+                        android:textSize="18sp"
+
+                        ></ImageView>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_background_blue"
+                    android:layout_marginRight="15dp"
+                    android:text="Make Quze"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:gravity="top|center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="15dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/gradesbuttoniddoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/grades"
+                        android:textSize="18sp"
+
+                        ></ImageView>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_background_blue"
+                    android:layout_marginRight="15dp"
+                    android:text="Show grade"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:weightSum="3"
-        android:gravity="center"
-    >
-        <Button
-            android:id="@+id/makequzebuttoniddoctor"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_blue"
-            android:text="make Quze"
-            android:textSize="18sp"
-            ></Button>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.3"
-
-            ></TextView>
-        <Button
-            android:id="@+id/gradesbuttoniddoctor"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_blue"
-            android:text="grades"
-            android:textSize="18sp"
-            ></Button>
-    </LinearLayout>
-
-    </LinearLayout>
-    <Button
+    <ImageView
         android:id="@+id/chatdoctorid"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_weight="0.3"
-        android:background="@drawable/button_background_blue"
+        android:background="@drawable/chat"
         android:textSize="18sp"
-        android:text="chat"
-        ></Button>
+
+        ></ImageView>
 </LinearLayout>
