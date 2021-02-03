@@ -220,14 +220,23 @@
         </LinearLayout>
 
     </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        app:cardBackgroundColor="@color/whiteTextColor"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-25dp"
+        >
     <ImageView
         android:id="@+id/chatdoctorid"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.3"
+        android:layout_height="match_parent"
         android:background="@drawable/chat"
         android:textSize="18sp"
 
         ></ImageView>
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

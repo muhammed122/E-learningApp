@@ -2,17 +2,17 @@
 <resources>
 
     <array name="icons">
-        <item>@drawable/button_background_blue</item>
-        <item>@drawable/button_background_blue</item>
-        <item>@drawable/button_background_blue</item>
-        <item>@drawable/button_background_blue</item>
-        <item>@drawable/button_background_blue</item>
+        <item>@drawable/chat</item>
+        <item>@drawable/attandase</item>
+        <item>@drawable/quze</item>
+        <item>@drawable/grades</item>
+
     </array>
     <array name="colors">
         <item>@android:color/holo_blue_light</item>
-        <item>@android:color/holo_green_dark</item>
-        <item>@android:color/holo_red_light</item>
-        <item>@android:color/holo_purple</item>
-        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_blue_light</item>
+
     </array>
 </resources>
