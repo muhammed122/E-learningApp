@@ -6,6 +6,7 @@
         <item>@drawable/attandase</item>
         <item>@drawable/quze</item>
         <item>@drawable/grades</item>
+        <item>@drawable/add</item>
 
     </array>
     <array name="colors">

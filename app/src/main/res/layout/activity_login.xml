@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="5"
-
     android:layout_gravity="bottom"
     android:background="@color/login_bk_color"
+
     android:focusableInTouchMode="true"
+    android:weightSum="5"
 
     >
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom"
-        android:weightSum="3"
         android:layout_weight="4.8"
-        >
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="3">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
             android:layout_weight="2"
-            >
+            android:gravity="center"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
                 android:gravity="center"
+                android:weightSum="2"
 
                 >
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/cairo_bold"
+                        android:text="Already \nhave an \nAccount?"
                         android:textColor="@color/darkTextColor"
                         android:textSize="25sp"
                         android:textStyle="bold"
-                        android:text="Already \nhave an \nAccount?"/>
+
+                        />
 
 
                 </LinearLayout>
@@ -58,74 +60,84 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_splash_hero"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"/>
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_splash_hero" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
                 android:paddingRight="20dp"
-                >
+                android:weightSum="2">
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    app:boxStrokeColor="@color/primaryTextColor"
+                   app:boxStrokeWidth="2dp"
                     android:layout_weight="1"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_marginTop="20dp">
+
+                    >
+
                     <EditText
                         android:id="@+id/editTextEmail"
-                        android:inputType="textEmailAddress"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:textSize="12dp"
-                        android:hint="Email"/>
+                        android:textSize="12dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    app:boxStrokeColor="@color/primaryTextColor"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_weight="1">
+
                     <EditText
                         android:id="@+id/editTextPassword"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="@string/password"
-                        android:maxLines="1"
-                        android:inputType="textPassword"/>
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="20dp"
                     android:text="Forgot Password?"
                     android:textColor="#004AB1"
-                    android:textSize="12sp"
-                    android:layout_gravity="end"
-                    android:paddingRight="20dp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/cirLoginButton"
@@ -134,57 +146,57 @@
                     android:layout_height="wrap_content"
 
 
-                    android:text="Login"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
-                   />
+                    android:text="Login" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:textStyle="bold"
+                    android:onClick="onLoginClick"
+                    android:text="New user? Register Now"
                     android:textColor="#106FF3"
                     android:textSize="17sp"
-                    android:text="New user? Register Now"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:onClick="onLoginClick"/>
+                    android:textStyle="bold" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="12"
+                    android:layout_marginTop="30dp"
                     android:gravity="center"
-                    android:layout_marginTop="30dp">
+                    android:weightSum="12">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="1dp"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_weight="3"/>
+                        android:layout_weight="3"
+                        android:background="@color/colorPrimaryDark" />
 
                     <TextView
-                        android:textColor="@color/darkTextColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Use other Methods"
                         android:layout_weight="6"
-                        android:textSize="12sp"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="Use other Methods"
+                        android:textColor="@color/darkTextColor"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="1dp"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_weight="3"/>
+                        android:layout_weight="3"
+                        android:background="@color/colorPrimaryDark" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
         </LinearLayout>
+
         <ImageView
 
             android:layout_width="wrap_content"
@@ -203,7 +215,6 @@
 
 
         >
-
 
 
         <View

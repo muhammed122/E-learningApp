@@ -25,8 +25,7 @@
         android:textColor="#000"
         android:background="#FFFF"
 
-
-        ></EditText>
+        />
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,14 +52,14 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:hint="choose 1"
-            ></EditText>
+            />
         </com.google.android.material.textfield.TextInputLayout>
-        <RadioButton
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
-            ></RadioButton>
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,14 +84,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:hint="choose 2"
-                ></EditText>
+                />
         </com.google.android.material.textfield.TextInputLayout>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
-            ></RadioButton>
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -117,14 +116,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:hint="choose 3"
-                ></EditText>
+                />
         </com.google.android.material.textfield.TextInputLayout>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
-            ></RadioButton>
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -149,14 +148,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:hint="choose 4"
-                ></EditText>
+                />
         </com.google.android.material.textfield.TextInputLayout>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="15dp"
-            ></RadioButton>
+            />
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -186,7 +185,7 @@
     android:text="next question"
     android:layout_weight="1"
     android:layout_marginRight="20dp"
-    ></Button>
+    />
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -195,7 +194,7 @@
             android:layout_weight="1"
           android:layout_marginLeft="20dp"
 
-            ></Button>
+            />
 
     </LinearLayout>
     ></androidx.cardview.widget.CardView>

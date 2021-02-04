@@ -1,16 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="3">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
-        ></LinearLayout>
 
+    android:weightSum="3">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.3"
+    android:text="doctor control page"
+    android:gravity="center"
+    android:fontFamily="@font/cairo_bold"
+    android:textSize="24sp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -31,96 +43,149 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:weightSum="3"
+                android:weightSum="3.5"
                 android:orientation="vertical"
                 android:gravity="center"
                 >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1.5"
-                    app:cardBackgroundColor="@color/whiteTextColor"
-                    app:cardCornerRadius="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="15dp"
-
-                    >
                     <ImageView
                         android:id="@+id/makeattandecbuttoniddoctor"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:background="@drawable/attandase"
-                        android:textSize="18sp"
+                        android:layout_marginRight="45dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
 
-                        ></ImageView>
-                </androidx.cardview.widget.CardView>
+                        />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Attandance"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.5"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/button_background_blue"
                     android:layout_marginRight="15dp"
-                    android:text="Take attandance"
+                    android:text="genrat code to attandace"
+                    android:textSize="18sp"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    ></TextView>
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_back_ground_whit"
+                    android:text="OPEN"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cairo_bold"
+                    />
             </LinearLayout>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:weightSum="3"
+                android:weightSum="3.5"
                 android:orientation="vertical"
-                android:gravity="top|center"
+                android:gravity="center"
                 >
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/uploadmatrialdoctor"
+                    android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="1.5"
-                    app:cardBackgroundColor="@color/whiteTextColor"
-                    app:cardCornerRadius="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="15dp"
-
-                    >
-                    <ImageView
-                        android:id="@+id/uploadmatrail"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.5"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/upload"
-                        android:textSize="18sp"
-
-                        ></ImageView>
-                </androidx.cardview.widget.CardView>
-
+                    android:layout_weight="1.2"
+                    android:background="@drawable/upload"
+                    android:layout_marginBottom="40dp"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.4"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/button_background_blue"
                     android:layout_marginRight="15dp"
-                    android:text="Upload matarial"
+                    android:text="Matrial"
+                    android:textSize="20sp"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    ></TextView>
-
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="upload matriel"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_back_ground_whit"
+                    android:text="OPEN"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cairo_bold"
+                    />
             </LinearLayout>
+
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.98"
+                android:background="#000"
+            android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.07"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.98"
+                android:background="#000"
+
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -135,108 +200,140 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:weightSum="3"
+                android:weightSum="3.5"
                 android:orientation="vertical"
                 android:gravity="center"
                 >
-                <androidx.cardview.widget.CardView
+                <ImageView
+                    android:id="@+id/makequzedoctor"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1.5"
-                    app:cardBackgroundColor="@color/whiteTextColor"
-                    app:cardCornerRadius="15dp"
+                    android:background="@drawable/quze"
 
-                    >
-                    <ImageView
-                        android:id="@+id/makequzebuttoniddoctor"
-                        android:layout_width="match_parent"
-
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.5"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/quze"
-                        android:textSize="18sp"
-
-                        ></ImageView>
-                </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Quze"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.5"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/button_background_blue"
                     android:layout_marginRight="15dp"
-                    android:text="Make Quze"
+                    android:text="Creat new quze"
+                    android:textSize="18sp"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    ></TextView>
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_back_ground_whit"
+                    android:text="OPEN"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cairo_bold"
+                    />
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:weightSum="3"
+                android:weightSum="3.5"
                 android:orientation="vertical"
-                android:gravity="top|center"
+                android:gravity="center"
                 >
-                <androidx.cardview.widget.CardView
+                <ImageView
+                    android:id="@+id/showgradestudent"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="1.5"
-                    app:cardBackgroundColor="@color/whiteTextColor"
-                    app:cardCornerRadius="15dp"
-
-                    >
-                    <ImageView
-                        android:id="@+id/gradesbuttoniddoctor"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.5"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/grades"
-                        android:textSize="18sp"
-
-                        ></ImageView>
-                </androidx.cardview.widget.CardView>
+                    android:layout_weight="1.2"
+                    android:background="@drawable/grades"
+                    android:layout_marginBottom="40dp"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.4"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/button_background_blue"
                     android:layout_marginRight="15dp"
-                    android:text="Show grade"
+                    android:text="Grades"
+                    android:textSize="20sp"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    ></TextView>
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="show grades"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cairo_semibold"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_back_ground_whit"
+                    android:text="OPEN"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cairo_bold"
+                    />
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        app:cardBackgroundColor="@color/whiteTextColor"
-        app:cardCornerRadius="15dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-25dp"
-        >
-    <ImageView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/chatdoctorid"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
         android:background="@drawable/chat"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
         android:textSize="18sp"
 
-        ></ImageView>
+        />
 
-    </androidx.cardview.widget.CardView>
+
+
 </LinearLayout>

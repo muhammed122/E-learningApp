@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.studenthome);
-
+        setContentView(R.layout.activity_login);
+/*
         CircleMenuView menu = findViewById(R.id.circle_menu);
         menu.setEventListener(new CircleMenuView.EventListener() {
             @Override
@@ -46,6 +46,6 @@ public class MainActivity extends AppCompatActivity {
             public void onButtonClickAnimationEnd(@NonNull CircleMenuView view, int index) {
                 Log.d("D", "onButtonClickAnimationEnd| index: " + index);
             }
-        });
+        });*/
     }
 }
