@@ -31,40 +31,44 @@
         android:textSize="24sp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        ></TextView>
+        android:fontFamily="@font/cairo_semibold"
+        />
 
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.3"
         android:orientation="horizontal"
+        android:gravity="top"
+        android:layout_gravity="top"
         >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:text="name subject"
-            android:gravity="center"
             android:textSize="24sp"
-            android:layout_marginLeft="20dp"
-            ></TextView>
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/cairo_semibold"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="horizontal"
         android:weightSum="5"
-        android:gravity="center"
+        android:gravity="center|left"
         >
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
             android:textSize="24sp"
             android:text="Quze grades"
-            ></TextView>
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/cairo_semibold"
+            />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -102,31 +106,26 @@
 
         </LinearLayout>
 
-<ImageView
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:layout_marginRight="-15dp"
-    android:src="@drawable/ic_baseline_add_circle_24"
 
-    />
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="horizontal"
         android:weightSum="5"
-        android:gravity="center"
+        android:gravity="center|left"
         >
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
             android:textSize="24sp"
             android:text="Attandance time"
+            android:fontFamily="@font/cairo_semibold"
+            android:layout_marginLeft="25dp"
             />
         <LinearLayout
             android:layout_width="0dp"
@@ -165,14 +164,7 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="-15dp"
-            android:src="@drawable/ic_baseline_add_circle_24"
 
-            />
 
 
     </LinearLayout>

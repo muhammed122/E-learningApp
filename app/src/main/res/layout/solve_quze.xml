@@ -5,30 +5,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#E1E1E1"
-
+    android:background="@color/whiteBodyColor"
     android:weightSum="5">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="Solve Question"
+        android:fontFamily="@font/cairo_bold"
+        android:layout_margin="15dp"
+        android:textColor="#000"
+        android:drawableRight="@drawable/qusetionmarks"
+        android:background="@drawable/button_back_ground_whit"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="5"
+        android:orientation="vertical"
+     android:layout_marginTop="50dp"
+        android:layout_margin="10dp"
+        >
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
     android:gravity="center"
     android:weightSum="3"
-android:layout_marginLeft="5dp"
+    android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     app:cardCornerRadius="15dp"
-
 
     >
 <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:text="The Question "
-    android:layout_weight="2"
     android:gravity="center"
     android:textSize="13sp"
+    android:textColor="#000"
     android:fontFamily="@font/cairo_bold"
-    android:layout_margin="20dp"
+android:background="@drawable/button_back_ground_black"
+
     />
 
 </androidx.cardview.widget.CardView>
@@ -57,6 +79,9 @@ android:layout_marginLeft="5dp"
             android:fontFamily="@font/cairo_semibold"
             android:text="answer 1"
             android:gravity="center"
+            android:textColor="#000"
+            android:background="@drawable/button_back_ground_black"
+
             />
 
     </androidx.cardview.widget.CardView>
@@ -77,6 +102,8 @@ android:layout_marginLeft="5dp"
             android:fontFamily="@font/cairo_semibold"
             android:text="answer 2"
             android:gravity="center"
+            android:textColor="#000"
+            android:background="@drawable/button_back_ground_black"
             />
 
     </androidx.cardview.widget.CardView>
@@ -103,8 +130,10 @@ android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:fontFamily="@font/cairo_semibold"
-                android:text="answer 1"
+                android:text="answer 3"
                 android:gravity="center"
+                android:textColor="#000"
+                android:background="@drawable/button_back_ground_black"
                 />
 
         </androidx.cardview.widget.CardView>
@@ -114,6 +143,7 @@ android:layout_marginLeft="5dp"
             android:layout_weight="1.5"
             android:gravity="center"
             android:weightSum="3"
+
             android:layout_margin="5dp"
             app:cardCornerRadius="15dp"
 
@@ -123,8 +153,10 @@ android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:fontFamily="@font/cairo_semibold"
-                android:text="answer 2"
+                android:text="answer 4"
                 android:gravity="center"
+                android:textColor="#000"
+                android:background="@drawable/button_back_ground_black"
                 />
 
         </androidx.cardview.widget.CardView>
@@ -138,6 +170,9 @@ android:layout_marginLeft="5dp"
         android:text="next Question"
         android:layout_marginTop="50dp"
         android:layout_gravity="center|bottom"
+
+
         />
+    </LinearLayout>
 
 </LinearLayout>

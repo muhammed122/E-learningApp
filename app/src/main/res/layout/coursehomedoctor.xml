@@ -52,9 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:background="@drawable/attandase"
-                        android:layout_marginRight="45dp"
-                        android:layout_marginLeft="45dp"
+                        android:background="@drawable/attt"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
 
@@ -115,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1.2"
-                    android:background="@drawable/upload"
+                    android:background="@drawable/newupload"
                     android:layout_marginBottom="40dp"
                     />
                 <TextView
@@ -209,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1.5"
-                    android:background="@drawable/quze"
+                    android:background="@drawable/qe"
 
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="25dp"
@@ -326,12 +324,11 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="0.2"
-        android:background="@drawable/chat"
+        android:background="@drawable/newchat"
         android:layout_gravity="center|left"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="15dp"
         android:textSize="18sp"
-
         />
 
 
