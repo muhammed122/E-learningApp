@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
 
 
     <TextView
@@ -24,30 +25,31 @@
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#fff"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:boxStrokeColor="@color/primaryTextColor"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        app:boxStrokeColor="@color/primaryTextColor"
-        app:boxStrokeWidth="2dp"
-        android:background="#fff"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintVertical_bias="0.039"
 
         >
+
         <EditText
+            android:id="@+id/content_question_add_by_doctor_in_questionmakedocotr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Your Qusetion"
+            android:layout_height="wrap_content"
             android:background="@drawable/button_back_ground_black"
             android:fontFamily="@font/cairo_semibold"
-            />
+
+            android:hint="Your Qusetion" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,33 +65,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.066">
+        app:layout_constraintVertical_bias="0.066"
+        android:background="@drawable/button_back_ground_black"
+        >
 
-        <com.google.android.material.textfield.TextInputLayout
 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="@color/primaryTextColor"
-            app:boxStrokeWidth="2dp"
-         >
+
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/answe_one_in_questionmakedocotr"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:hint="Answer 1"
+                android:layout_weight="1.8"
+                android:background="@drawable/button_back_ground_black"
                 android:fontFamily="@font/cairo_semibold"
-                android:background="@drawable/button_back_ground_whit"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+android:hint="choose 1"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-<TextView
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="0.2"
-    />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
         <CheckBox
+            android:id="@+id/check_box_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
@@ -102,7 +104,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
+        android:gravity="center|bottom"
         android:orientation="horizontal"
         android:weightSum="3.5"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,39 +112,33 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.063">
+        app:layout_constraintVertical_bias="0.063"
+        android:background="@drawable/button_back_ground_black">
+
         <CheckBox
+            android:id="@+id/check_box_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
-
+android:layout_gravity="center"
             />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            />
+            android:layout_weight="0.2" />
 
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="@color/primaryTextColor"
-            app:boxStrokeWidth="2dp"
-            >
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/answe_two_in_questionmakedocotr"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:hint="Answer 2"
-                android:background="@drawable/button_back_ground_whit"
+                android:layout_weight="1.8"
+                android:background="@drawable/button_back_ground_black"
                 android:fontFamily="@font/cairo_semibold"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+                android:hint="choose 2"
                 />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
 
 
 
@@ -160,32 +156,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.122">
+        app:layout_constraintVertical_bias="0.122"
+        android:background="@drawable/button_back_ground_black"
+        >
 
-        <com.google.android.material.textfield.TextInputLayout
 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="@color/primaryTextColor"
-            app:boxStrokeWidth="2dp"
-            >
+
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/answe_three_in_questionmakedocotr"
+
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:hint="Answer 3"
-                android:background="@drawable/button_back_ground_whit"
+                android:layout_weight="1.8"
+                android:background="@drawable/button_back_ground_black"
                 android:fontFamily="@font/cairo_semibold"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+                android:hint="choose 3"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            />
+            android:layout_weight="0.2" />
+
         <CheckBox
+            android:id="@+id/check_box_three"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8" />
@@ -205,11 +202,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="0.116">
+        app:layout_constraintVertical_bias="0.116"
+        android:background="@drawable/button_back_ground_black"
+
+        >
 
         <CheckBox
+            android:id="@+id/check_box_four"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.8" />
 
         <TextView
@@ -217,32 +218,29 @@
             android:layout_height="match_parent"
             android:layout_weight="0.2" />
 
-        <com.google.android.material.textfield.TextInputLayout
 
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8">
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/answe_four_in_questionmakedocotr"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/button_back_ground_whit"
-                android:hint="Answer 4"
+                android:layout_weight="1.8"
+                android:background="@drawable/button_back_ground_black"
                 android:fontFamily="@font/cairo_semibold"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+                android:hint="choose 4"
                 />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
 
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView2"
+        android:id="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:src="@drawable/nextb"
+        android:src="@drawable/nexts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
@@ -251,6 +249,7 @@
         app:layout_constraintVertical_bias="0.433" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cairo_bold"
@@ -258,25 +257,25 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintTop_toBottomOf="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
+        app:layout_constraintVertical_bias="0.542" />
 
     <ImageView
+        android:id="@+id/button_showall_qusetion_in_qusetion_make_doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/viewall"
+        android:src="@drawable/viewalls"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toEndOf="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        app:layout_constraintVertical_bias="0.433"
-
-        />
+        app:layout_constraintVertical_bias="0.388" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cairo_bold"
@@ -284,8 +283,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintTop_toBottomOf="@+id/button_showall_qusetion_in_qusetion_make_doctor"
+        app:layout_constraintVertical_bias="0.673" />
 </androidx.constraintlayout.widget.ConstraintLayout>
