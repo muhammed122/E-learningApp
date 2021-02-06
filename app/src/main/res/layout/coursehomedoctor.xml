@@ -86,7 +86,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
-                    android:gravity="center"
+                    android:gravity="center|top"
                     android:background="@drawable/button_back_ground_whit"
                     android:text="OPEN"
                     android:textSize="18sp"
