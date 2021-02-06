@@ -161,15 +161,21 @@ android:background="@drawable/button_back_ground_black"
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
         android:background="@drawable/button_background_blue"
-        android:layout_margin="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_marginLeft="20dp"
         android:text="next Question"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center|bottom"
+        android:layout_marginTop="70dp"
+        android:gravity="center|top"
+        android:textSize="24sp"
+        android:textColor="#FFFf"
+        android:fontFamily="@font/cairo_semibold"
+        android:drawableRight="@drawable/nexts"
 
 
         />
