@@ -71,7 +71,7 @@ android:layout_gravity="bottom"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
+                    app:boxStrokeWidth="2dp"
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
                         android:id="@+id/editTextName"
@@ -96,7 +96,9 @@ android:layout_gravity="bottom"
                         style="@style/modifiedEditText"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:hint="@string/login_email_hint"/>
+                        android:hint="@string/login_email_hint"
+                        app:boxStrokeWidth="2dp"
+                        />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -113,7 +115,9 @@ android:layout_gravity="bottom"
                         style="@style/modifiedEditText"
                         android:hint="@string/login_password_hint"
                         android:maxLines="1"
-                        android:inputType="textPassword"/>
+                        android:inputType="textPassword"
+                        app:boxStrokeWidth="2dp"
+                        />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button

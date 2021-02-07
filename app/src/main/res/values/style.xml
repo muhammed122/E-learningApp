@@ -31,7 +31,7 @@
         <item name="materialThemeOverlay">
             @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox
         </item>
-        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="boxCollapsedPaddingTop">1dp</item>
     </style>
 
 

@@ -42,6 +42,7 @@
 
     >
 <TextView
+    android:id="@+id/question_content_in_solve_quze"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:text="The Question "
@@ -73,6 +74,7 @@ android:background="@drawable/button_back_ground_black"
 
         >
         <TextView
+            android:id="@+id/choose_one__in_solve_quze"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="13sp"
@@ -96,6 +98,7 @@ android:background="@drawable/button_back_ground_black"
 
         >
         <TextView
+            android:id="@+id/choose_two__in_solve_quze"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="13sp"
@@ -126,6 +129,7 @@ android:background="@drawable/button_back_ground_black"
             android:layout_margin="5dp"
             >
             <TextView
+                android:id="@+id/choose_three__in_solve_quze"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="13sp"
@@ -149,6 +153,7 @@ android:background="@drawable/button_back_ground_black"
 
             >
             <TextView
+                android:id="@+id/choose_foure__in_solve_quze"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="13sp"
@@ -162,16 +167,18 @@ android:background="@drawable/button_back_ground_black"
         </androidx.cardview.widget.CardView>
     </LinearLayout>
     <TextView
+        android:id="@+id/button_conferm_to_solve_next_question"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_weight="0.6"
         android:background="@drawable/button_background_blue"
         android:layout_marginRight="20dp"
 
         android:layout_marginLeft="20dp"
         android:text="next Question"
-        android:layout_marginTop="70dp"
-        android:gravity="center|top"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+
         android:textSize="24sp"
         android:textColor="#FFFf"
         android:fontFamily="@font/cairo_semibold"
