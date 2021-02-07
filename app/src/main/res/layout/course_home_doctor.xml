@@ -14,8 +14,8 @@
     android:gravity="center"
     android:fontFamily="@font/cairo_bold"
     android:textSize="24sp"
-    android:drawableRight="@drawable/control"
-    android:layout_marginRight="20dp"
+    android:drawableEnd="@drawable/control"
+    android:layout_marginEnd="20dp"
     />
     <TextView
         android:layout_width="match_parent"

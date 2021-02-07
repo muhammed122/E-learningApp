@@ -56,19 +56,23 @@
         android:id="@+id/name_stuent_in_studentpage_doctor"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.7"
         android:text="name student"
         android:fontFamily="@font/cairo_bold"
+        android:textSize="13sp"
         android:layout_marginTop="10dp"
+        android:gravity="center|top"
+
         />
     <TextView
         android:id="@+id/subject_name_in_studentpage_doctor"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.7"
         android:text="name subject"
         android:fontFamily="@font/cairo_bold"
         android:layout_marginTop="10dp"
+        android:textSize="13sp"
         />
 </LinearLayout>
 
