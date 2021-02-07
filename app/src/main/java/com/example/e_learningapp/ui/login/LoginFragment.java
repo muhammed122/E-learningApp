@@ -36,7 +36,7 @@ public class LoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         onClicks();
 
-        FirebaseDatabase.getInstance().getReference().child("dasd").setValue(1);
+
 
     }
 
