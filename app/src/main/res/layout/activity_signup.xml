@@ -34,6 +34,7 @@
                 android:textColor="@color/whiteTextColor"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textSize="18sp"
                 android:text="Here’s\nyour first\nstep with \nus! "/>
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
@@ -67,12 +68,15 @@ android:layout_gravity="bottom"
                     android:id="@+id/textInputName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
                         android:id="@+id/editTextName"
                         style="@style/modifiedEditText"
+
                         android:inputType="textPersonName"
                         android:maxLines="1"
                         android:hint="Name"/>
@@ -81,6 +85,8 @@ android:layout_gravity="bottom"
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputEmail"
                     android:layout_width="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_height="match_parent"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
@@ -92,33 +98,13 @@ android:layout_gravity="bottom"
                         android:maxLines="1"
                         android:hint="@string/login_email_hint"/>
                 </com.google.android.material.textfield.TextInputLayout>
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="horizontal"
-                   android:weightSum="2"
-
-                   >
-                   <Spinner
-
-                       android:layout_width="0dp"
-                       android:layout_height="match_parent"
-                       android:layout_weight="1"
-                       android:layout_marginTop="15dp"
-                       ></Spinner>
-                   <Spinner
-                       android:layout_width="0dp"
-                       android:layout_height="match_parent"
-                       android:layout_weight="1"
-                       android:layout_marginTop="15dp"
-                       ></Spinner>
-
-               </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                     android:layout_marginTop="@dimen/loginViewsMargin">
@@ -142,15 +128,7 @@ android:layout_gravity="bottom"
                     android:layout_marginTop="@dimen/loginViewsMargin"
                   />
 
-                <TextView
-                    style="@style/parent"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="#106FF3"
-                    android:textSize="17sp"
-                    android:text="Already have an account?"
-                    android:layout_marginTop="@dimen/loginViewsMargin"
-                    android:onClick="onLoginClick"/>
+
 
 
             </LinearLayout>
@@ -185,6 +163,5 @@ android:layout_gravity="bottom"
         android:src="@drawable/ic_back_img"
         android:layout_marginRight="11dp"
         android:layout_marginBottom="30dp"
-        android:onClick="onLoginClick"
         android:adjustViewBounds="false"/>
 </RelativeLayout>

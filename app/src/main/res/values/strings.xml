@@ -39,7 +39,7 @@
     <string name="text_4">4</string>
     <string name="text_5">5</string>
     <string name="text_6">6</string>
-    <string name="forgot_password">Forgot your password?</string>
+    <string name="forgot_password">Forgot password?</string>
     <string name="email_confirmation">Enter your Email to confirm\nyour identity\.</string>
     <string name="enterEmail">Enter Email</string>
     <string name="success">Success!</string>
@@ -172,4 +172,9 @@
     <string name="address_title">Address</string>
     <string name="address">City, Street</string>
     <string name="email_title">Email</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="new_user_register_now">New user? Register Now</string>
 </resources>

@@ -10,7 +10,7 @@
     <dimen name="headerMoreTextSize">18sp</dimen>
     <dimen name="card_margin">5dp</dimen>
     <dimen name="frutorial_title">15sp</dimen>
-   <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
     <dimen name="loginViewsMargin">20dp</dimen>
 
 </resources>

@@ -45,8 +45,6 @@
     <!-- Base application theme. -->
 
 
-
-
     <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
 
     <!--styles for app-->
@@ -55,11 +53,13 @@
 
     <style name="viewParent.headerText.NoMode">
         <item name="android:textColor">@color/darkTextColor</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
     </style>
 
 
 
     <style name="modifiedEditText" parent="parent">
+        <item name="fontFamily">@font/cairo_semibold</item>
         <item name="android:textSize">@dimen/newsMoreTextSize</item>
         <item name="android:backgroundTint" tools:targetApi="lollipop">@color/primaryTextColor</item>
     </style>
@@ -67,13 +67,14 @@
     <style name="loginButton" parent="viewParent">
         <item name="android:background">@drawable/button_background_blue</item>
         <item name="android:textColor">@color/whiteTextColor</item>
-        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/cairo_bold</item>
     </style>
 
     <style name="spinnerHintText" parent="parent">
         <item name="android:textSize">@dimen/newsMoreTextSize</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:paddingLeft">5dp</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
     </style>
     <!-- Base application theme. -->
 
