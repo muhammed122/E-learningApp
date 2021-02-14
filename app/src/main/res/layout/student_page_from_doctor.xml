@@ -305,14 +305,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.2"
-                    android:src="@drawable/aboutcours"
+                    android:src="@drawable/student"
                     android:layout_marginTop="15dp"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="about course"
+                    android:text="about student"
                     android:fontFamily="@font/cairo_semibold"
                     android:gravity="bottom|center"
                     />
