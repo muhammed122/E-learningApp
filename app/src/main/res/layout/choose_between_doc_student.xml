@@ -8,17 +8,18 @@
     tools:context=".ui.splash.WelcomeScreenFragment"
     >
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/circleImageView2"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_splash_hero"
+        android:src="@drawable/hero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/textView4"
