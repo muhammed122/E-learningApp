@@ -6,33 +6,180 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.e_learningapp.ui.login.LoginFragment"
+        android:name="com.example.e_learningapp.ui.auth.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login"
         >
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_instructorHomeFragment"
+            app:destination="@id/instructorHomeFragment"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_studentHome"
+            app:destination="@id/studentHome"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.e_learningapp.ui.splash.SplashFragment"
         android:label="SplashFragment"
         tools:layout="@layout/activity_spalsh"
-
-
         >
         <action
-            android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:popUpTo="@id/mobile_navigation"
+            android:id="@+id/action_splashFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment"
+            app:popUpTo="@+id/mobile_navigation"
             app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_instructorHomeFragment"
+            app:destination="@id/instructorHomeFragment"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_studentHome"
+            app:destination="@id/studentHome"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.e_learningapp.ui.home.SignUpFragment"
+        android:name="com.example.e_learningapp.ui.auth.sign_up.SignUpFragment"
         android:label="SignUpFragment"
-        tools:layout="@layout/activity_signup"
-        />
+        tools:layout="@layout/fragment_sign_up"
+
+        >
+        <action
+            android:id="@+id/action_signUpFragment_to_instructorHomeFragment"
+            app:destination="@id/instructorHomeFragment"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_signUpFragment_to_studentHome"
+            app:destination="@id/studentHome"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.e_learningapp.ui.splash.WelcomeScreenFragment"
+        android:label="WelcomeScreenFragment"
+        tools:layout="@layout/choose_between_doc_student"
+        >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/instructorHomeFragment"
+        android:name="com.example.e_learningapp.ui.instructor.home.InstructorHomeFragment"
+        android:label="fragment_instructor_home"
+        tools:layout="@layout/fragment_home_doctor_all_course" >
+        <action
+            android:id="@+id/action_instructorHomeFragment_to_createCourse"
+            app:destination="@id/createCourse"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_instructorHomeFragment_to_fragmentInstructorControl"
+            app:destination="@id/fragmentInstructorControl"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/studentHome"
+        android:name="com.example.e_learningapp.ui.student.home.StudentHomeFragment"
+        android:label="fragment_student_home"
+        tools:layout="@layout/fragment_student_home" />
+    <fragment
+        android:id="@+id/createCourse"
+        android:name="com.example.e_learningapp.ui.instructor.create_course.CreateCourseFragment"
+        android:label="fragment_create_course"
+        tools:layout="@layout/fragment_create_course" />
+    <fragment
+        android:id="@+id/fragmentInstructorControl"
+        android:name="com.example.e_learningapp.ui.instructor.control.FragmentInstructorControl"
+        android:label="course_home_doctor_fragment"
+        tools:layout="@layout/course_control_instructor_fragment" >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_fragmentAddStudents"
+            app:destination="@id/fragmentAddStudents"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <argument
+            android:name="courseName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddStudents"
+        android:name="com.example.e_learningapp.ui.instructor.add_students.FragmentAddStudents"
+        android:label="fragment_add_students"
+        tools:layout="@layout/fragment_add_students" >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <argument
+            android:name="courseName"
+            app:argType="string" />
+    </fragment>
 </navigation>

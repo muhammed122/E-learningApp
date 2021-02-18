@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def lifecycle_version = "2.2.0"
     def nav_version = "2.3.3"
 
@@ -73,4 +74,7 @@ dependencies {
     //hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     annotationProcessor "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //loading
+    implementation 'com.samigehi:loadingview:1.1'
 }

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#106FF3"
+    android:weightSum="4.5"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/whiteTextColor"
+        app:cardCornerRadius="15dp"
+        android:layout_weight="4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFF"
+        android:gravity="center"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="Creat \ New Course"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    style="@style/viewParent.headerText.NoMode"
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/hero"
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="15dp"
+
+                app:boxStrokeColor="@color/primaryTextColor"
+                app:boxStrokeWidth="2dp"
+                >
+
+                <EditText
+                    android:id="@+id/edit_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="name course"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:boxStrokeWidth="2dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/edit_quiz_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:hint="Grade Quze"
+                        android:inputType="number"
+                        android:textSize="12sp"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:boxStrokeWidth="2dp"
+                    >
+                    <EditText
+                        android:id="@+id/edit_project_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:hint="Project Grade"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:inputType="number"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:boxStrokeWidth="2dp"
+                    >
+                    <EditText
+                        android:id="@+id/edit_attend_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:hint="Attandance Grad"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:inputType="number"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                />
+
+                <Button
+                    android:id="@+id/btn_create_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginTop="20dp"
+
+                    android:background="@drawable/button_background_blue"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="conferm to creat course"
+                    android:layout_gravity="bottom"
+                    />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

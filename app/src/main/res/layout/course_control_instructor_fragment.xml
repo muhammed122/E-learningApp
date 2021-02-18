@@ -3,20 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="3">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.3"
-    android:text="doctor control page"
-    android:gravity="center"
-    android:fontFamily="@font/cairo_bold"
-    android:textSize="24sp"
-    android:drawableEnd="@drawable/control"
-    android:layout_marginEnd="20dp"
-    />
+    android:weightSum="3"
+    tools:context=".ui.instructor.control.FragmentInstructorControl"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:text="doctor control page"
+        android:gravity="center"
+        android:fontFamily="@font/cairo_bold"
+        android:textSize="24sp"
+        android:drawableEnd="@drawable/control"
+        android:layout_marginEnd="20dp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -48,16 +49,16 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 >
-                    <ImageView
-                        android:id="@+id/makeattandecbuttoniddoctor"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1.5"
-                        android:background="@drawable/attt"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
+                <ImageView
+                    android:id="@+id/makeattandecbuttoniddoctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/attt"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
 
-                        />
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -174,7 +175,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.98"
                 android:background="#000"
-            android:layout_marginBottom="5dp"
+                android:layout_marginBottom="5dp"
                 />
             <TextView
                 android:layout_width="1dp"
@@ -326,16 +327,42 @@
         android:layout_marginLeft="15dp"
         />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/chatdoctorid"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center|left"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="15dp"
         android:layout_weight="0.2"
-        android:background="@drawable/newchat"
-        android:textSize="18sp" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chatdoctorid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:padding="13dp"
+            android:background="@drawable/newchat"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btn_add_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="right"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background_blue"
+            android:text="Add Students"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
 
 
 

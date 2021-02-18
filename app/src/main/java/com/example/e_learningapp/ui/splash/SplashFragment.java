@@ -13,16 +13,18 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
+import com.example.e_learningapp.BaseFragment;
 import com.example.e_learningapp.R;
+import com.example.e_learningapp.data.MySharedPrefrance;
+import com.example.e_learningapp.utils.Const;
 
-public class SplashFragment extends Fragment {
+public class SplashFragment extends BaseFragment {
 
-    private SplashViewModel splashViewModel;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        splashViewModel =
-                new ViewModelProvider(this).get(SplashViewModel.class);
+
         View root = inflater.inflate(R.layout.activity_spalsh, container, false);
 
         return root;
@@ -34,19 +36,30 @@ public class SplashFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                goTo(view);
+                action();
             }
         }, 3000);
 
 
     }
 
-    private void goTo (View view){
-        NavDirections navDirections  = SplashFragmentDirections.actionSplashFragmentToLoginFragment();
-        Navigation.findNavController(view).navigate(navDirections);
-      //  Navigation.findNavController(view).popBackStack(R.id.splashFragment , true);
+    private void action(){
+        if (MySharedPrefrance.getUserType().equals("")){
+            navigate(SplashFragmentDirections.actionSplashFragmentToWelcomeScreenFragment());
+        }else {
+            if (MySharedPrefrance.getUserType().equals(Const.INSTRUCTOR_USER)){
+
+                navigate(SplashFragmentDirections.actionSplashFragmentToInstructorHomeFragment());
+            }else {
+
+                navigate(SplashFragmentDirections.actionSplashFragmentToStudentHome());
+            }
+
+        }
+
     }
 }
