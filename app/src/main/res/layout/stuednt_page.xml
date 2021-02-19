@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
-                    android:text="grades"
+
                     android:fontFamily="@font/cairo_semibold"
                     android:gravity="center|top"
                     />
@@ -115,39 +115,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:weightSum="3"
                     android:layout_marginTop="5dp"
                     >
                     <TextView
-                        android:id="@+id/current_grad_id_in_studentpage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="right"
-                        android:text="5"
-
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:text="grades"
+                        android:fontFamily="@font/cairo_semibold"
+                        android:gravity="center|top"
                         />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="\"
-
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-
-                        android:text="5"
-
-                        />
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -175,14 +154,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.2"
-                    android:src="@drawable/attandacenew"
+                    android:src="@drawable/newupload"
                     android:layout_marginTop="15dp"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
-                    android:text="Attendance"
+
                     android:fontFamily="@font/cairo_semibold"
                     android:gravity="center|top"
                     />
@@ -191,39 +170,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:weightSum="3"
                     android:layout_marginTop="5dp"
                     >
                     <TextView
-                        android:id="@+id/current_attandace_id_in_studentpage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="right"
-                        android:text="5"
-
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:text="Matrial"
+                        android:fontFamily="@font/cairo_semibold"
+                        android:gravity="center|top"
                         />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="\"
-
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-
-                        android:text="5"
-
-                        />
-
                 </LinearLayout>
             </LinearLayout>
 

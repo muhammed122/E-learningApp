@@ -11,7 +11,8 @@ public class App extends Application {
 
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
         MySharedPrefrance.init(this);
     }
