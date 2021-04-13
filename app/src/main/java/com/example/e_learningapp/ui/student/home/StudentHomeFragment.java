@@ -43,6 +43,25 @@ public class StudentHomeFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel.getCourses();
         MainActivity.startLoading();
+        observers();
+        onClicks();
+
+    }
+
+    private void onClicks (){
+        adapter.setOnClick(new AdapterRecyclerCourses.OnClick() {
+            @Override
+            public void onItemClick(String id, String name) {
+                navigate(StudentHomeFragmentDirections.actionStudentHomeToStudentPageFragment(name, id));
+
+            }
+        });
+
+
+    }
+
+    private void observers (){
+
         viewModel.coursesLiveData.observe(myActivity, new Observer<ArrayList<ModelCourse>>() {
             @Override
             public void onChanged(ArrayList<ModelCourse> modelCourses) {
@@ -62,6 +81,7 @@ public class StudentHomeFragment extends BaseFragment {
                 Toast.makeText(myContext, s, Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     @Override

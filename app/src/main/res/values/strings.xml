@@ -177,5 +177,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="new_user_register_now">New user? Register Now</string>
+    <string name="required">Required</string>
 
 </resources>

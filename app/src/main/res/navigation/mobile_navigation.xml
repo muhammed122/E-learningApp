@@ -144,7 +144,11 @@
         android:id="@+id/studentHome"
         android:name="com.example.e_learningapp.ui.student.home.StudentHomeFragment"
         android:label="fragment_student_home"
-        tools:layout="@layout/fragment_student_home" />
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_studentHome_to_studentPageFragment"
+            app:destination="@id/studentPageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createCourse"
         android:name="com.example.e_learningapp.ui.instructor.create_course.CreateCourseFragment"
@@ -169,6 +173,20 @@
         <argument
             android:name="courseName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_takeAttendanceFragment"
+            app:destination="@id/takeAttendanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_fragmentUploadMaterial"
+            app:destination="@id/fragmentUploadMaterial" />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_fragmentCreateQuiz"
+            app:destination="@id/fragmentCreateQuiz" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAddStudents"
@@ -180,6 +198,48 @@
             app:argType="string" />
         <argument
             android:name="courseName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeAttendanceFragment"
+        android:name="com.example.e_learningapp.ui.instructor.attendance.TakeAttendanceFragment"
+        android:label="TakeAttendanceFragment"
+        tools:layout="@layout/take_attendace_fragment"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentPageFragment"
+        android:name="com.example.e_learningapp.ui.student.control.StudentPageFragment"
+        android:label="StudentPageFragment"
+        tools:layout="@layout/fragment_stuednt_page"
+        >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="couseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUploadMaterial"
+        android:name="com.example.e_learningapp.ui.instructor.upload_material.FragmentUploadMaterial"
+        android:label="FragmentUploadMaterial"
+        tools:layout="@layout/fragment_upload_material"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateQuiz"
+        android:name="com.example.e_learningapp.ui.instructor.quiz.FragmentCreateQuiz"
+        android:label="FragmentCreateQuiz"
+        tools:layout="@layout/fragment_create_quiz">
+        <argument
+            android:name="courseId"
             app:argType="string" />
     </fragment>
 </navigation>

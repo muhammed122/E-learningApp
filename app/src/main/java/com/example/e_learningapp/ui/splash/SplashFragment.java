@@ -48,7 +48,7 @@ public class SplashFragment extends BaseFragment {
     }
 
     private void action(){
-        if (MySharedPrefrance.getUserType().equals("")){
+        if (MySharedPrefrance.getUserEmail().equals("")){
             navigate(SplashFragmentDirections.actionSplashFragmentToWelcomeScreenFragment());
         }else {
             if (MySharedPrefrance.getUserType().equals(Const.INSTRUCTOR_USER)){

@@ -298,7 +298,7 @@
             android:layout_marginRight="10dp"
             >
             <EditText
-                android:id="@+id/activat_code_id_student__in_studentpage"
+                android:id="@+id/edit_attend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="code attandace"
@@ -308,7 +308,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/button_activate_code_id_in_studentpage"
+            android:id="@+id/btn_attend"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -82,7 +82,7 @@
                     android:fontFamily="@font/cairo_semibold"
                     />
                 <TextView
-                    android:id="@+id/open_attandace_to_make_it_in_course_home_docotr"
+                    android:id="@+id/btn_open_take_attendance"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"

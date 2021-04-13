@@ -56,6 +56,7 @@ public class FragmentAddStudents extends BaseFragment {
                 MainActivity.stopLoading();
 
                     adapter.setList(modelMembers);
+                    if (binding!= null)
                     binding.recyclerStudents.setAdapter(adapter);
 
             }
@@ -68,7 +69,7 @@ public class FragmentAddStudents extends BaseFragment {
                     binding.editEmail.setText("");
                     Toast.makeText(myContext, Const.SUCCESS, Toast.LENGTH_SHORT).show();
                 }else {
-                    Toast.makeText(myContext, s, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(myContext, s , Toast.LENGTH_SHORT).show();
                 }
             }
         });

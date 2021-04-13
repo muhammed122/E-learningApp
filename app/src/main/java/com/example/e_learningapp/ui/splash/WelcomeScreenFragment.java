@@ -36,18 +36,26 @@ public class WelcomeScreenFragment extends BaseFragment {
         binding.studentCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-               binding.doctorCheckBox.setChecked(false);
-                Const.userType = Const.STUDENT_USER;
+                if (b) {
+                    binding.doctorCheckBox.setChecked(false);
+                    Const.userType = Const.STUDENT_USER;
+                }else {
+                    Const.userType = "";
+
+                }
+
 
             }
         });
         binding.doctorCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-              binding.studentCheckBox.setChecked(false);
-                Const.userType = Const.INSTRUCTOR_USER;
+                if (b) {
+                    binding.studentCheckBox.setChecked(false);
+                    Const.userType = Const.INSTRUCTOR_USER;
+                }else {
+                    Const.userType = "";
+                }
             }
         });
         binding.btnNext.setOnClickListener(new View.OnClickListener() {

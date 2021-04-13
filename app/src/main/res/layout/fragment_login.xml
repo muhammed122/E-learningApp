@@ -8,7 +8,7 @@
     android:background="@color/login_bk_color"
     android:focusableInTouchMode="true"
     android:weightSum="5"
-    tools:context="ui.login.LoginFragment"
+    tools:context="ui.auth.login.LoginFragment"
     >
 
     <LinearLayout

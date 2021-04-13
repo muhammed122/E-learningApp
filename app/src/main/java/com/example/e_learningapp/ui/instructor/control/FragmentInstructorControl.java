@@ -42,8 +42,27 @@ public class FragmentInstructorControl extends BaseFragment {
     }
 
     private void onClicks(){
-        binding.btnAddMember.setOnClickListener((View.OnClickListener) view ->
+        binding.btnAddMember.setOnClickListener( view ->
                 navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToFragmentAddStudents(courseId , courseName)));
+
+        binding.btnOpenTakeAttendance.setOnClickListener(view -> {
+         navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToTakeAttendanceFragment(courseId));
+
+        });
+
+        binding.openToUploadNewMatrialInCourseHomeDocotr.setOnClickListener(view -> {
+            navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToFragmentUploadMaterial(courseId));
+
+        });
+        binding.openToUploadNewMatrialInCourseHomeDocotr.setOnClickListener(view -> {
+            navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToFragmentUploadMaterial(courseId));
+
+        });
+        binding.openQuzeToMakeItInCourseHomeDocotr.setOnClickListener(view -> {
+            navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToFragmentCreateQuiz(courseId));
+
+        });
+
 
     }
 

@@ -77,4 +77,12 @@ dependencies {
 
     //loading
     implementation 'com.samigehi:loadingview:1.1'
+
+    implementation('com.github.barteksc:android-pdf-viewer:2.0.3') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+
+
+    }
 }

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cairo_bold"
-        android:text="creat mcq Question "
+        android:text="Create mcq Assignment "
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,13 +43,12 @@
         >
 
         <EditText
-            android:id="@+id/content_question_add_by_doctor_in_questionmakedocotr"
+            android:id="@+id/edit_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_back_ground_black"
             android:fontFamily="@font/cairo_semibold"
-
-            android:hint="Your Qusetion" />
+            android:hint="Your Question" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,6 +56,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/button_back_ground_black"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="3.5"
@@ -65,24 +65,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.066"
-        android:background="@drawable/button_back_ground_black"
-        >
+        app:layout_constraintVertical_bias="0.066">
 
 
-
-            <EditText
-                android:id="@+id/answe_one_in_questionmakedocotr"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.8"
-                android:background="@drawable/button_back_ground_black"
-                android:fontFamily="@font/cairo_semibold"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-android:hint="choose 1"
-                />
-
+        <EditText
+            android:id="@+id/edit_answer1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.8"
+            android:background="@drawable/button_back_ground_black"
+            android:fontFamily="@font/cairo_semibold"
+            android:hint="choose 1"
+            android:textSize="13sp" />
 
 
         <TextView
@@ -104,6 +99,7 @@ android:hint="choose 1"
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/button_back_ground_black"
         android:gravity="center|bottom"
         android:orientation="horizontal"
         android:weightSum="3.5"
@@ -112,34 +108,30 @@ android:hint="choose 1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.063"
-        android:background="@drawable/button_back_ground_black">
+        app:layout_constraintVertical_bias="0.063">
 
         <CheckBox
             android:id="@+id/check_box_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-android:layout_gravity="center"
-            />
+            android:layout_gravity="center"
+            android:layout_weight="0.8" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.2" />
 
-            <EditText
-                android:id="@+id/answe_two_in_questionmakedocotr"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.8"
-                android:background="@drawable/button_back_ground_black"
-                android:fontFamily="@font/cairo_semibold"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-                android:hint="choose 2"
-                />
-
+        <EditText
+            android:id="@+id/edit_answer2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.8"
+            android:background="@drawable/button_back_ground_black"
+            android:fontFamily="@font/cairo_semibold"
+            android:hint="choose 2"
+            android:textSize="13sp" />
 
 
     </LinearLayout>
@@ -148,6 +140,7 @@ android:layout_gravity="center"
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/button_back_ground_black"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="3.5"
@@ -156,24 +149,20 @@ android:layout_gravity="center"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.122"
-        android:background="@drawable/button_back_ground_black"
-        >
+        app:layout_constraintVertical_bias="0.122">
 
 
+        <EditText
+            android:id="@+id/edit_answer3"
 
-            <EditText
-                android:id="@+id/answe_three_in_questionmakedocotr"
-
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.8"
-                android:background="@drawable/button_back_ground_black"
-                android:fontFamily="@font/cairo_semibold"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-                android:hint="choose 3"
-                />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.8"
+            android:background="@drawable/button_back_ground_black"
+            android:fontFamily="@font/cairo_semibold"
+            android:hint="choose 3"
+            android:textSize="13sp" />
 
 
         <TextView
@@ -194,6 +183,7 @@ android:layout_gravity="center"
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@drawable/button_back_ground_black"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="3.5"
@@ -203,7 +193,6 @@ android:layout_gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:layout_constraintVertical_bias="0.116"
-        android:background="@drawable/button_back_ground_black"
 
         >
 
@@ -219,72 +208,57 @@ android:layout_gravity="center"
             android:layout_weight="0.2" />
 
 
-
-            <EditText
-                android:id="@+id/answe_four_in_questionmakedocotr"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.8"
-                android:background="@drawable/button_back_ground_black"
-                android:fontFamily="@font/cairo_semibold"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-                android:hint="choose 4"
-                />
+        <EditText
+            android:id="@+id/edit_answer4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.8"
+            android:background="@drawable/button_back_ground_black"
+            android:fontFamily="@font/cairo_semibold"
+            android:hint="choose 4"
+            android:textSize="13sp" />
 
 
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
+        android:id="@+id/button_make_next_question"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:src="@drawable/nexts"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cairo_bold"
-        android:text="Next Qusestion"
+        android:text="Next question"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
-        app:layout_constraintVertical_bias="0.542" />
 
-    <ImageView
-        android:id="@+id/button_showall_qusetion_in_qusetion_make_doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/viewalls"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toEndOf="@+id/button_make_next_qusetion_in_qusetion_make_doctor"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        app:layout_constraintVertical_bias="0.388" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cairo_bold"
-        android:text="View All Qusestion"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_showall_qusetion_in_qusetion_make_doctor"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintTop_toBottomOf="@+id/button_make_next_question" />
+
+
+    <Button
+
+
+        android:id="@+id/btn_upload_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:onClick="upload"
+        android:text="Upload the assignment"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
