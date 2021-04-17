@@ -62,6 +62,12 @@ public class FragmentInstructorControl extends BaseFragment {
             navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToFragmentCreateQuiz(courseId));
 
         });
+        binding.chatdoctorid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigate(FragmentInstructorControlDirections.actionFragmentInstructorControlToChatFragment(courseId));
+            }
+        });
 
 
     }

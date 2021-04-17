@@ -14,6 +14,8 @@ public class Const {
     public static final String REF_ATTENDANCE = "attendance";
     public static final String REF_FILES = "courses files";
     public static final String REF_QUIZ = "courses quiz";
+    public static final String REF_QUIZ_ANSWER  = "quiz answer" ;
+    public static final String REF_CHATS  = "chats" ;
 
 
 

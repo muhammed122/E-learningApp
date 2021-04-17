@@ -336,7 +336,7 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         >
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageButton
             android:id="@+id/chatdoctorid"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

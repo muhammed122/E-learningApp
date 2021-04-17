@@ -62,6 +62,28 @@ public class StudentPageFragment extends BaseFragment {
                 }
             }
         });
+
+        binding.btnMatrial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigate(StudentPageFragmentDirections.actionStudentPageFragmentToCourseMaterialFragment(courseId));
+            }
+        });
+
+        binding.btnSolveQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigate(StudentPageFragmentDirections.actionStudentPageFragmentToAllQuizFragment(courseId));
+            }
+        });
+        binding.chatInStudentpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigate(StudentPageFragmentDirections.actionStudentPageFragmentToChatFragment(courseId));
+            }
+        });
+
+
     }
 
     private void observers(){

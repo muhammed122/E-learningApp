@@ -158,6 +158,7 @@ public class FragmentCreateQuiz extends BaseFragment {
             binding.editAnswer2.setText("");
             binding.editAnswer3.setText("");
             binding.editAnswer4.setText("");
+
         }
 
     }

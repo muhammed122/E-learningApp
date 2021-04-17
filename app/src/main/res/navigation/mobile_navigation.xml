@@ -187,6 +187,9 @@
         <action
             android:id="@+id/action_fragmentInstructorControl_to_fragmentCreateQuiz"
             app:destination="@id/fragmentCreateQuiz" />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAddStudents"
@@ -222,6 +225,15 @@
         <argument
             android:name="couseId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_studentPageFragment_to_courseMaterialFragment"
+            app:destination="@id/courseMaterialFragment" />
+        <action
+            android:id="@+id/action_studentPageFragment_to_allQuizFragment"
+            app:destination="@id/allQuizFragment" />
+        <action
+            android:id="@+id/action_studentPageFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentUploadMaterial"
@@ -238,6 +250,54 @@
         android:name="com.example.e_learningapp.ui.instructor.quiz.FragmentCreateQuiz"
         android:label="FragmentCreateQuiz"
         tools:layout="@layout/fragment_create_quiz">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseMaterialFragment"
+        android:name="com.example.e_learningapp.ui.student.material.CourseMaterialFragment"
+        android:label="CourseMaterialFragment"
+        tools:layout="@layout/fragment_course_material"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/allQuizFragment"
+        android:name="com.example.e_learningapp.ui.student.quiz.AllQuizFragment"
+        android:label="AllQuizFragment"
+        tools:layout="@layout/fragment_all_quizl"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_allQuizFragment_to_courseQuizFragment"
+            app:destination="@id/courseQuizFragment"
+            app:popUpTo="@+id/allQuizFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/courseQuizFragment"
+        android:name="com.example.e_learningapp.ui.student.quiz.CourseQuizFragment"
+        android:label="CourseQuizFragment"
+        tools:layout="@layout/fragment_solve_quze"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.e_learningapp.ui.chat.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
         <argument
             android:name="courseId"
             app:argType="string" />
