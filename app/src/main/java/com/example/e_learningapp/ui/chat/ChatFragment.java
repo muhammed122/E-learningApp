@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.e_learningapp.BaseFragment;
 import com.example.e_learningapp.R;
 import com.example.e_learningapp.adapters.AdapterRecyclerChat;
+import com.example.e_learningapp.data.MySharedPrefrance;
 import com.example.e_learningapp.databinding.FragmentChatBinding;
 import com.example.e_learningapp.databinding.FragmentStuedntPageBinding;
 import com.example.e_learningapp.models.ModelChat;
@@ -59,7 +60,7 @@ public class ChatFragment extends BaseFragment  {
                 String massage = binding.editEmail.getText().toString().trim();
                 if (!massage.equals("")){
                     binding.editEmail.setText("");
-                    viewModel.sendMassage(courseId, massage);
+                    viewModel.sendMassage(courseId, massage , MySharedPrefrance.getUserName());
                 }else {
                     binding.editEmail.setError(getString(R.string.required));
                 }
@@ -72,7 +73,7 @@ public class ChatFragment extends BaseFragment  {
         viewModel.massagesLiveData.observe(getViewLifecycleOwner(), new Observer<ArrayList<ModelChat>>() {
             @Override
             public void onChanged(ArrayList<ModelChat> modelChats) {
-                adapterRecyclerChat.setList(modelChats);
+                adapterRecyclerChat.setmMessageList(modelChats);
                 binding.recyclerChat.setAdapter(adapterRecyclerChat);
             }
         });

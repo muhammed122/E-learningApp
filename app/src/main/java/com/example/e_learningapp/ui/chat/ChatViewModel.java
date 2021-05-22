@@ -35,11 +35,11 @@ public class ChatViewModel  extends ViewModel {
 
     }
 
-    public void sendMassage (String courseId , String  massage ){
+    public void sendMassage (String courseId , String  massage  , String userName){
 
 
        ref.child(Const.REF_CHATS).child(courseId).push()
-               .setValue(new ModelChat(massage , MySharedPrefrance.getUserId()));
+               .setValue(new ModelChat(massage , MySharedPrefrance.getUserId(),userName));
 
     }
 

@@ -4,12 +4,22 @@ public class ModelChat {
 
 
     String massage ;
+    String userName ;
     String senderId ;
 
     public ModelChat (){}
-    public ModelChat(String massage, String senderId) {
+    public ModelChat(String massage, String senderId , String userName) {
         this.massage = massage;
         this.senderId = senderId;
+        this.userName = userName ;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getMassage() {

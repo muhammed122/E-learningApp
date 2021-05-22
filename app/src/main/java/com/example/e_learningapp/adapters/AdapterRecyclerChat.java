@@ -22,13 +22,14 @@ public class AdapterRecyclerChat extends RecyclerView.Adapter{
 
     private static final int VIEW_TYPE_MESSAGE_SENT = 1;
     private static final int VIEW_TYPE_MESSAGE_RECEIVED = 2;
-    private Context mContext;
+
     private List<ModelChat> mMessageList;
 
-    public AdapterRecyclerChat(Context context, List<ModelChat> mMessageList) {
-       this.mContext = context;
-       this.mMessageList = mMessageList;
+    public void setmMessageList(List<ModelChat> mMessageList) {
+        this.mMessageList = mMessageList;
     }
+
+
     @Override
     public int getItemCount() {
         return mMessageList.size();
@@ -36,8 +37,8 @@ public class AdapterRecyclerChat extends RecyclerView.Adapter{
     @Override
     public int getItemViewType(int position) {
         ModelChat message = (ModelChat) mMessageList.get(position);
-        //current id you save in phone from firbase-------------------------->
-        if (message.getSenderId().equals("current id")) {
+
+        if (message.getSenderId().equals(MySharedPrefrance.getUserId())) {
             // If the current user is the sender of the message
             return VIEW_TYPE_MESSAGE_SENT;
         } else {
@@ -66,25 +67,28 @@ public class AdapterRecyclerChat extends RecyclerView.Adapter{
             view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_chat_me, parent, false);
             return new SentMessageHolder(view);
-        } else if (viewType == VIEW_TYPE_MESSAGE_RECEIVED) {
+        } else {
             view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_chat_other, parent, false);
             return new ReceivedMessageHolder(view);
         }
-        return null;
+
     }
     // Passes the message object to a ViewHolder so that the contents can be bound to UI.
 
     private class SentMessageHolder extends RecyclerView.ViewHolder {
-        TextView messageText, timeText;
+        TextView messageText, textName;
 
         SentMessageHolder(View itemView) {
             super(itemView);
 
+            textName = itemView.findViewById(R.id.text_user_name);
             messageText = itemView.findViewById(R.id.text_gchat_message_me);
         }
 
         void bind(ModelChat message) {
+
+            textName.setVisibility(View.GONE);
             messageText.setText(message.getMassage());
 
 
@@ -92,13 +96,15 @@ public class AdapterRecyclerChat extends RecyclerView.Adapter{
     }
 
     private class ReceivedMessageHolder extends RecyclerView.ViewHolder {
-        TextView messageText;
+        TextView messageText , textName;
 
         ReceivedMessageHolder(View itemView) {
             super(itemView);
+            textName = itemView.findViewById(R.id.text_user_name);
             messageText =itemView.findViewById(R.id.text_gchat_message_other);
         }
         void bind(ModelChat message) {
+            textName.setText(message.getUserName());
             messageText.setText(message.getMassage());
 
         }
