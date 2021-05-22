@@ -17,6 +17,7 @@ import com.example.e_learningapp.R;
 import com.example.e_learningapp.adapters.AdapterRecyclerCourses;
 import com.example.e_learningapp.databinding.FragmentStudentHomeBinding;
 import com.example.e_learningapp.databinding.FragmentStuedntPageBinding;
+import com.example.e_learningapp.models.ModelCourse;
 import com.example.e_learningapp.ui.student.home.StudentHomeViewModel;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -28,6 +29,9 @@ public class StudentPageFragment extends BaseFragment {
     private FragmentStuedntPageBinding  binding ;
     private String courseId  ;
     private String courseName ;
+
+    public static String attendanceGrade ;
+    public static String quizGrade ;
 
     StudentPageViewModel viewModel ;
     @Nullable
@@ -43,8 +47,10 @@ public class StudentPageFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         courseId = StudentPageFragmentArgs.fromBundle(requireArguments()).getCouseId();
         courseName = StudentPageFragmentArgs.fromBundle(requireArguments()).getName();
+        viewModel.getCourseData(courseId);
         onClicks();
         observers();
     }
@@ -83,10 +89,26 @@ public class StudentPageFragment extends BaseFragment {
             }
         });
 
+        binding.btnGrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigate(StudentPageFragmentDirections.actionStudentPageFragmentToGradesFragment(courseId));
+            }
+        });
+
 
     }
 
     private void observers(){
+
+        viewModel.courseDetails.observe(myActivity, new Observer<ModelCourse>() {
+            @Override
+            public void onChanged(ModelCourse modelCourse) {
+
+                attendanceGrade = modelCourse.getAttendanceGrade() +"";
+                quizGrade = modelCourse.getAssignmentGrade() +"";
+            }
+        });
         viewModel.attendLiveData.observe(myActivity, new Observer<String>() {
             @Override
             public void onChanged(String s) {

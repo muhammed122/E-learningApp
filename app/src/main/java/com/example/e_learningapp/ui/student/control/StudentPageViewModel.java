@@ -26,6 +26,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 public class StudentPageViewModel extends ViewModel {
 
     MutableLiveData<String> attendLiveData = new MutableLiveData<>();
+    MutableLiveData<ModelCourse> courseDetails = new MutableLiveData<>();
 
     private FirebaseAuth auth ;
     private DatabaseReference ref ;
@@ -34,6 +35,25 @@ public class StudentPageViewModel extends ViewModel {
     public StudentPageViewModel(DatabaseReference reference , FirebaseAuth auth  ) {
         ref = reference ;
         this.auth = auth ;
+
+    }
+
+    public void getCourseData (String courseId){
+
+        ref.child(Const.REF_COURSES).child(courseId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                ModelCourse modelCourse = snapshot.getValue(ModelCourse.class);
+                courseDetails.setValue(modelCourse);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 

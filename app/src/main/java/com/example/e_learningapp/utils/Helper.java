@@ -1,5 +1,7 @@
 package com.example.e_learningapp.utils;
 
+import com.example.e_learningapp.data.MySharedPrefrance;
+
 import java.util.Random;
 
 public class Helper {
@@ -14,6 +16,7 @@ public class Helper {
 
         return email.replace("*", ".");
     }
+
 
 
     public static int generateCode() {

@@ -241,7 +241,6 @@
         android:fontFamily="@font/cairo_bold"
         android:text="Next question"
         android:textSize="18sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_make_next_question" />
@@ -249,12 +248,12 @@
 
     <Button
 
-
         android:id="@+id/btn_upload_quiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="10dp"
         android:onClick="upload"
         android:text="Upload the assignment"
         android:textStyle="bold"
