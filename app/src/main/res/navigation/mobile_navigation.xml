@@ -190,6 +190,9 @@
         <action
             android:id="@+id/action_fragmentInstructorControl_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_fragmentInstructorControl_to_gradsFragment"
+            app:destination="@id/gradsFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAddStudents"
@@ -310,6 +313,16 @@
         android:name="com.example.e_learningapp.ui.student.grades.GradesFragment"
         android:label="GradesFragment"
         tools:layout="@layout/fragment_grades_view_student"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gradsFragment"
+        android:name="com.example.e_learningapp.ui.instructor.grads.GradsFragment"
+        android:label="GradsFragment"
+        tools:layout="@layout/fragment_grads"
         >
         <argument
             android:name="courseId"

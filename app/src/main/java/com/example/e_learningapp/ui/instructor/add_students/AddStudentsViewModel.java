@@ -44,6 +44,8 @@ public class AddStudentsViewModel extends ViewModel {
         model.setCourseId(courseId);
         model.setStudentEmail(studentEmail);
         model.setCourseName(courseName);
+        model.setAttendanceGrade(0);
+        model.setAttendanceGrade(0);
 
         ref.child(Const.REF_COURSE_MEMBERS).child(studentEmail).child(courseId).setValue(model);
 

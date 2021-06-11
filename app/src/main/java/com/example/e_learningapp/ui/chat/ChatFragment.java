@@ -29,10 +29,9 @@ public class ChatFragment extends BaseFragment  {
 
     private FragmentChatBinding binding ;
     private String courseId  ;
-
-
     private AdapterRecyclerChat adapterRecyclerChat ;
     ChatViewModel viewModel ;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

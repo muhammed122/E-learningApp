@@ -75,6 +75,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     annotationProcessor "com.google.dagger:hilt-compiler:$hilt_version"
 
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //font dimens
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
     //loading
     implementation 'com.samigehi:loadingview:1.1'
 

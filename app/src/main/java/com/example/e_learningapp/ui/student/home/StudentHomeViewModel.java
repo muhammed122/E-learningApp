@@ -27,6 +27,7 @@ public class StudentHomeViewModel extends ViewModel {
 
     MutableLiveData<ArrayList<ModelCourse>> coursesLiveData = new MutableLiveData<>();
     MutableLiveData<String> errorLiveData = new MutableLiveData<>();
+    MutableLiveData<String> checkJoinToCourseLiveData = new MutableLiveData<>();
     private ArrayList<ModelCourse> list;
     private DatabaseReference ref;
 
@@ -40,9 +41,8 @@ public class StudentHomeViewModel extends ViewModel {
 
     public void getCourses() {
 
-
         ref.child(Const.REF_COURSE_MEMBERS).child(Helper.removeDotForFireBase(MySharedPrefrance.getUserEmail()))
-                .addListenerForSingleValueEvent(new ValueEventListener() {
+                .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -59,6 +59,28 @@ public class StudentHomeViewModel extends ViewModel {
                         Log.e("TAG1", "onDataChange: " + error.getMessage());
                     }
                 });
+    }
+
+    public void checkJoinToCourse (String courseId ){
+
+        ref.child(Const.REF_COURSES).child(courseId).child("courseName").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.getValue() != null) {
+                    checkJoinToCourseLiveData.setValue(snapshot.getValue().toString());
+                }else {
+                    errorLiveData.setValue("Course not found");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
     }
 
 

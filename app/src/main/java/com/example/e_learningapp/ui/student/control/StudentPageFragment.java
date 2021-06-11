@@ -14,26 +14,24 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.e_learningapp.BaseFragment;
 import com.example.e_learningapp.MainActivity;
 import com.example.e_learningapp.R;
-import com.example.e_learningapp.adapters.AdapterRecyclerCourses;
-import com.example.e_learningapp.databinding.FragmentStudentHomeBinding;
 import com.example.e_learningapp.databinding.FragmentStuedntPageBinding;
 import com.example.e_learningapp.models.ModelCourse;
-import com.example.e_learningapp.ui.student.home.StudentHomeViewModel;
+
 
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
 public class StudentPageFragment extends BaseFragment {
 
-
     private FragmentStuedntPageBinding  binding ;
     private String courseId  ;
     private String courseName ;
-
     public static String attendanceGrade ;
     public static String quizGrade ;
 
     StudentPageViewModel viewModel ;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -109,11 +107,17 @@ public class StudentPageFragment extends BaseFragment {
                 quizGrade = modelCourse.getAssignmentGrade() +"";
             }
         });
-        viewModel.attendLiveData.observe(myActivity, new Observer<String>() {
+        viewModel.attendLiveData.observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String s) {
+                if (s.equals(""))
+                    return;
+
                 MainActivity.stopLoading();
+                binding.editAttend.setText("");
+                binding.editAttend.clearFocus();
                 Toast.makeText(myContext, s, Toast.LENGTH_SHORT).show();
+                viewModel.attendLiveData.setValue("");
             }
         });
     }

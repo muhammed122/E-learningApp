@@ -9,6 +9,7 @@ import com.example.e_learningapp.models.ModelAuth;
 import com.example.e_learningapp.models.ModelQuiz;
 import com.example.e_learningapp.models.ModelUserAnswer;
 import com.example.e_learningapp.utils.Const;
+import com.example.e_learningapp.utils.Helper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +22,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
+
+import static com.example.e_learningapp.ui.student.control.StudentPageFragment.quizGrade;
 
 
 @HiltViewModel
@@ -81,6 +84,8 @@ public class CourseQuizViewModel extends ViewModel {
                 .child(auth.getUid()).setValue(new ModelUserAnswer(MySharedPrefrance.getUserName()
                                  , MySharedPrefrance.getUserEmail(),MySharedPrefrance.getUserId(), grade));
 
+        uploadDegree(courseId , grade);
+
     }
     public void checkIfUserAnswered(String courseId  , String quizId ){
         ref.child(Const.REF_QUIZ_ANSWER).child(courseId).child(quizId).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -96,6 +101,33 @@ public class CourseQuizViewModel extends ViewModel {
         });
 
 
+    }
+
+    public void uploadDegree (String courseId , int degree){
+        ref.child(Const.REF_COURSES)
+                .child(courseId)
+                .child(Const.REF_COURSE_MEMBERS)
+                .child(Helper.removeDotForFireBase(MySharedPrefrance.getUserEmail()))
+                .child("quizGrade").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot == null)
+                    return;
+                int oldDegree = snapshot.getValue(Integer.class);
+                ref.child(Const.REF_COURSES)
+                        .child(courseId)
+                        .child(Const.REF_COURSE_MEMBERS)
+                        .child(Helper.removeDotForFireBase(MySharedPrefrance.getUserEmail()))
+                        .child("quizGrade").setValue(oldDegree + degree) ;
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     public void getQuiz (String courseId , String quizId){

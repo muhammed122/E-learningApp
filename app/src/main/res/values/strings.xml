@@ -178,5 +178,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="new_user_register_now">New user? Register Now</string>
     <string name="required">Required</string>
+    <string name="enter_student_email">Enter Student Email</string>
+    <string name="enter_course_id">Enter Course Id</string>
+    <string name="attendance_grade">Attendance Grade :</string>
 
 </resources>

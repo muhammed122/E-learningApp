@@ -1,5 +1,6 @@
 package com.example.e_learningapp.ui.instructor.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,8 +16,10 @@ import android.widget.Toast;
 import com.example.e_learningapp.BaseFragment;
 import com.example.e_learningapp.MainActivity;
 import com.example.e_learningapp.adapters.AdapterRecyclerCourses;
+import com.example.e_learningapp.data.MySharedPrefrance;
 import com.example.e_learningapp.databinding.FragmentHomeDoctorAllCourseBinding;
 import com.example.e_learningapp.models.ModelCourse;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -72,6 +75,22 @@ public class InstructorHomeFragment extends BaseFragment {
 
 
     private void onClicks(){
+
+        binding.btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                MySharedPrefrance.setUserEmail("");
+                MySharedPrefrance.setUserId("");
+                MySharedPrefrance.setUserName("");
+                MySharedPrefrance.setUserType("");
+                FirebaseAuth.getInstance().signOut();
+
+                Intent intent = new Intent(myActivity , MainActivity.class);
+                startActivity(intent);
+                myActivity.finishAffinity();
+            }
+        });
         binding.btnAddCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
