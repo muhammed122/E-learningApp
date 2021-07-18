@@ -99,7 +99,6 @@ public class FragmentAddStudents extends BaseFragment {
       }else {
 
 
-
           MainActivity.startLoading();
           viewModel.addStudent(Helper.removeDotForFireBase(email), courseId , courseName);
 
