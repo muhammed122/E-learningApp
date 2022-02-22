@@ -21,12 +21,8 @@ import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
 public class LoginFragment extends BaseFragment {
-
-
     public LoginViewModel loginViewModel;
     private FragmentLoginBinding binding ;
-
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -58,7 +54,6 @@ public class LoginFragment extends BaseFragment {
         onClicks();
 
     }
-
 
     private void  onClicks(){
          binding.loginButton.setOnClickListener(new View.OnClickListener() {
