@@ -25,6 +25,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/student"
         android:fontFamily="@font/cairo_semibold"
         android:text="  Continue as student"
         android:textColor="#000"
@@ -34,9 +35,7 @@
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView2"
-        app:layout_constraintVertical_bias="0.502"
-        android:drawableLeft="@drawable/student"
-        />
+        app:layout_constraintVertical_bias="0.502" />
 
 
     <CheckBox

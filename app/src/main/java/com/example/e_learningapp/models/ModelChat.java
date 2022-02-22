@@ -8,6 +8,7 @@ public class ModelChat {
     String senderId ;
 
     public ModelChat (){}
+
     public ModelChat(String massage, String senderId , String userName) {
         this.massage = massage;
         this.senderId = senderId;
